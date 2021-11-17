@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@1,800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
+
+$primary-color: #ececec;
+$white-shadow: -10px -10px 15px rgba(255, 255, 255, 0.6);
+$black-shadow: 10px 10px 15px rgba(70, 70, 70, 0.2);
+$brighter-shadow: 10px 10px 15px rgba(70, 70, 70, 0.05);
+$no-shadow: 0px 0px 0px #ececec;
+
+$animation: 0.15s  ease-out;
+
+body {
+    background-color: $primary-color;
+    width: 300px;
+    height: 450px;
+    display: flex;
+    flex-direction: column;
+}
+
+.qq-title-container {
+    width: 300px;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h2, h5 {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+}
+
+h2 {    
+    color: #000;
+}
+
+h5 {    
+    color: #aaa;
+}
+
+.qq-switch-container {
+    width: 300px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+input[type="checkbox"] {
+    height: 200px;
+    width: 200px;
+    -webkit-appearance: none;
+    box-shadow: $white-shadow, 
+    $black-shadow,
+    inset $no-shadow,
+    inset $no-shadow;
+    position: absolute;
+    border-radius: 50%;
+    outline: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all $animation;
+
+    &:after {
+        content: "QQ";
+        font-family: 'Open Sans', sans-serif;
+        position: absolute;
+        color: #9a9a9a;
+        font-size: 64px;
+        transform: translate(0, -5%);
+        transition: all $animation;
+    }
+
+    &:checked {
+        box-shadow: $no-shadow, 
+        $no-shadow,
+        inset $brighter-shadow,
+        inset $black-shadow;
+
+        &:after {
+            color: #4f4ff8;
+        }
+    }
+}

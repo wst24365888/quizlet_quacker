@@ -2,9 +2,9 @@
   "name": "quizlet-crack",
   "version": "1.0.0",
   "description": "",
-  "main": "src/quizlet_quacker.ts",
+  "main": "src/ts/quizlet_quacker.ts",
   "scripts": {
-    "build": "tsc"
+    "build": "tsc && sass src/sass:dist/css"
   },
   "keywords": [],
   "author": "Xyphuz",
