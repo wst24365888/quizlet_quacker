@@ -1,0 +1,15 @@
+{
+  "name": "quizlet-crack",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/quizlet_quacker.ts",
+  "scripts": {
+    "build": "tsc"
+  },
+  "keywords": [],
+  "author": "Xyphuz",
+  "license": "ISC",
+  "dependencies": {
+    "@types/chrome": "^0.0.164"
+  }
+}
