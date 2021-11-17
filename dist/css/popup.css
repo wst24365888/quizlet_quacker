@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@1,800&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap");
 body {
-  background-color: #ececec;
+  background-color: #eee;
   width: 300px;
   height: 450px;
   display: flex;
@@ -20,7 +20,6 @@ h2, h5 {
   margin: 0;
   padding: 0;
   font-family: "Montserrat", sans-serif;
-  font-weight: 600;
 }
 
 h2 {
@@ -43,7 +42,7 @@ input[type=checkbox] {
   height: 200px;
   width: 200px;
   -webkit-appearance: none;
-  box-shadow: -10px -10px 15px rgba(255, 255, 255, 0.6), 10px 10px 15px rgba(70, 70, 70, 0.2), inset 0px 0px 0px #ececec, inset 0px 0px 0px #ececec;
+  box-shadow: -10px -10px 12px rgba(255, 255, 255, 0.7), 10px 10px 12px rgba(70, 70, 70, 0.2), inset 0px 0px 0px #eee, inset 0px 0px 0px #eee;
   position: absolute;
   border-radius: 50%;
   outline: none;
@@ -62,7 +61,7 @@ input[type=checkbox]:after {
   transition: all 0.15s ease-out;
 }
 input[type=checkbox]:checked {
-  box-shadow: 0px 0px 0px #ececec, 0px 0px 0px #ececec, inset 10px 10px 15px rgba(70, 70, 70, 0.05), inset 10px 10px 15px rgba(70, 70, 70, 0.2);
+  box-shadow: 0px 0px 0px #eee, 0px 0px 0px #eee, inset 10px 10px 12px rgba(70, 70, 70, 0.2), inset -10px -10px 12px rgba(70, 70, 70, 0.025);
 }
 input[type=checkbox]:checked:after {
   color: #4f4ff8;
