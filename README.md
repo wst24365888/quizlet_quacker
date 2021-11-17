@@ -4,6 +4,8 @@
 
 See paid Quizlet textbook answer, for educational purpose only.
 
+Please pay to support Quizlet!
+
 ## Usage
 
 1. Clone this repo or download zip and extract.
@@ -14,4 +16,4 @@ See paid Quizlet textbook answer, for educational purpose only.
 
 ## Demo
 
-https://user-images.githubusercontent.com/38447974/142237286-1f27a88d-a224-4c43-8a30-0ecdfeae37d8.mp4
+<https://user-images.githubusercontent.com/38447974/142237286-1f27a88d-a224-4c43-8a30-0ecdfeae37d8.mp4>
