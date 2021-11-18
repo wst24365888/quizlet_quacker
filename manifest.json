@@ -1,26 +1,39 @@
 {
-  "manifest_version": 2,
-  "name": "QQ - Quizlet Quacker",
-  "description": "See paid Quizlet textbook answer, for educational purpose only.",
-  "version": "0.0.1",
-  "browser_action": {
-    "default_icon": "img/icon.png",
-    "default_title": "QQ - Quizlet Quacker",
-    "default_popup": "dist/html/popup.html"
-  },
-  "icons": {
-    "128": "img/icon.png",
-    "48": "img/icon.png",
-    "16": "img/icon.png"
-  },
-  "content_scripts": [
-    {
-      "matches": ["https://quizlet.com/explanations/textbook-solutions/*"],
-      "js": ["dist/js/quizlet_quacker.js"],
-      "run_at": "document_start"
+    "author": "Xyphuz",
+    "browser_action": {
+        "default_icon": {
+            "16": "img/icon.png",
+            "48": "img/icon.png",
+            "128": "img/icon.png"
+        },
+        "default_title": "QQ - Quizlet Quacker",
+        "default_popup": "dist/html/popup.html"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "https://quizlet.com/explanations/textbook-solutions/*"
+            ],
+            "js": [
+                "dist/js/quizlet_quacker.js"
+            ],
+            "run_at": "document_start"
+        }
+    ],
+    "description": "See paid Quizlet textbook answer, for educational purpose only.",
+    "icons": {
+        "16": "img/icon.png",
+        "48": "img/icon.png",
+        "128": "img/icon.png"
+    },
+    "manifest_version": 2,
+    "name": "QQ - Quizlet Quacker",
+    "permissions": [
+        "activeTab"
+    ],
+    "version": "0.0.1",
+    "-ms-preload": {
+        "backgroundScript": "backgroundScriptsAPIBridge.js",
+        "contentScript": "contentScriptsAPIBridge.js"
     }
-  ],
-  "permissions": [
-    "activeTab"
-  ]
 }
