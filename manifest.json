@@ -1,6 +1,6 @@
 {
     "author": "Xyphuz",
-    "browser_action": {
+    "page_action": {
         "default_icon": {
             "16": "img/icon.png",
             "48": "img/icon.png",
