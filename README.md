@@ -14,6 +14,8 @@ Please pay to support Quizlet!
 
 3. Open Quizlet and enable this extension.
 
+> To use QQ, you must logout Quizlet!
+
 ## Demo
 
 <https://user-images.githubusercontent.com/38447974/142237286-1f27a88d-a224-4c43-8a30-0ecdfeae37d8.mp4>
