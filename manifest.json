@@ -12,7 +12,7 @@
     "content_scripts": [
         {
             "matches": [
-                "https://quizlet.com/explanations/textbook-solutions/*"
+                "https://quizlet.com/explanations/*"
             ],
             "js": [
                 "dist/js/quizlet_quacker.js"
@@ -31,7 +31,7 @@
     "permissions": [
         "activeTab"
     ],
-    "version": "0.0.2",
+    "version": "0.0.3",
     "-ms-preload": {
         "backgroundScript": "backgroundScriptsAPIBridge.js",
         "contentScript": "contentScriptsAPIBridge.js"
