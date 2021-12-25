@@ -1,19 +1,25 @@
 "use strict";
 class QuizletQuacker {
+    paywall;
     foreground;
     background;
+    refForeground;
     constructor() {
-        this.foreground = document.getElementsByClassName("hpidy4b s1oluvjw")[0];
-        this.background = document.getElementsByClassName("we2bqom")[0];
+        this.paywall = document.getElementsByClassName("paywalled-section")[0];
+        this.foreground = this.paywall.children[0];
+        this.background = this.paywall.children[1];
+        this.refForeground = this.foreground.cloneNode(true);
     }
-    removePaidWall() {
-        this.foreground.classList.remove("hpidy4b");
-        this.foreground.classList.remove("s1oluvjw");
+    removePayWall() {
+        for (let c of this.refForeground.classList) {
+            this.foreground.classList.remove(c);
+        }
         this.background.style.display = "none";
     }
-    restorePaidWall() {
-        this.foreground.classList.add("hpidy4b");
-        this.foreground.classList.add("s1oluvjw");
+    restorePayWall() {
+        for (let c of this.refForeground.classList) {
+            this.foreground.classList.add(c);
+        }
         this.background.style.display = "block";
     }
 }
@@ -24,14 +30,14 @@ document.onreadystatechange = () => {
         case "interactive":
             break;
         case "complete":
-            let qq = new QuizletQuacker();
+            const qq = new QuizletQuacker();
             chrome.runtime.onMessage.addListener((request, _, sendResponse) => {
                 console.log(request);
                 if (request.enabled) {
-                    qq.removePaidWall();
+                    qq.removePayWall();
                 }
                 else {
-                    qq.restorePaidWall();
+                    qq.restorePayWall();
                 }
                 if (sendResponse) {
                     sendResponse({ success: true });

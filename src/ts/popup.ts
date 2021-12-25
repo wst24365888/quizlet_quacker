@@ -1,7 +1,7 @@
 import { QuizletQuackerSwitchController } from './quizlet_quacker_switch_controller.js';
 
-let qqsc = new QuizletQuackerSwitchController();
-let qqs: HTMLInputElement | null = <HTMLInputElement | null>document.getElementById("qq-switch");
+const qqsc = new QuizletQuackerSwitchController();
+const qqs = document.getElementById("qq-switch") as HTMLInputElement | null;
 
 if (qqs != null) {
     qqs.addEventListener('click', () => {
